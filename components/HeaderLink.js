@@ -1,6 +1,4 @@
 const HeaderLink = ({ Icon, text, avatar, feed, hidden, active, avatar }) => {
-	// feed = true;
-	// Pasamos el Icono que son distintos componentes, todos Iconos
 	return (
 		<div
 			className={`${
@@ -19,6 +17,9 @@ const HeaderLink = ({ Icon, text, avatar, feed, hidden, active, avatar }) => {
 			>
 				{text}
 			</h4>
+			{active && (
+				<span className="hidden lg:inline-flex h-0.5 w-[calc(100%+20px)] bg-black dark:bg-white rounded-t-full" />
+			)}
 		</div>
 	);
 };
